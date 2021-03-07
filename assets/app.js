@@ -1,6 +1,6 @@
-let demo = document.querySelector('#demo');
+// let demo = document.querySelector('#demo');
 
-function changeText(){
-  demo.textContent = 'Yo Yo Yo';
-}
+// function changeText(){
+//   demo.textContent = 'Yo Yo Yo';
+// }
 
