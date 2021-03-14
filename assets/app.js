@@ -7,7 +7,9 @@ const people = [
 ]
 
 const total = people.reduce(function(acc, currSalary){
-  console.log(acc);
-  console.log(currSalary);
-  return acc
+  console.log(`Total ${acc}`);
+  console.log(`Current mony: $${currSalary.salary}`);
+  return acc += currSalary.salary;
 },0)
+
+console.log(total);
