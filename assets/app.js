@@ -1,6 +1,13 @@
-// let demo = document.querySelector('#demo');
+const people = [
+  {name: 'karim', age: 20, postion: 'developer', id: 1, salary: 200},
+  {name: 'rahim', age: 20, postion: 'designer', id: 2, salary: 300},
+  {name: 'sherrin', age: 20, postion: 'the boss', id: 3, salary: 240},
+  {name: 'afraz', age: 20, postion: 'developer', id: 4, salary: 260},
+  {name: 'farwa', age: 20, postion: 'manager', id: 5, salary: 400}
+]
 
-// function changeText(){
-//   demo.textContent = 'Yo Yo Yo';
-// }
-
+const total = people.reduce(function(acc, currSalary){
+  console.log(acc);
+  console.log(currSalary);
+  return acc
+},0)
