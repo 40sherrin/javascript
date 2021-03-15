@@ -23,10 +23,8 @@ const days = [
   'Saturday'
 ]
 
-
 const getDay = new Date().getDay();
 const getMonth = new Date().getMonth();
-
 
 console.log(days[getDay])
 console.log(months[getMonth])
