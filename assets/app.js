@@ -24,7 +24,6 @@ const days = [
 ]
 
 
-
 const getDay = new Date().getDay();
 const getMonth = new Date().getMonth();
 
