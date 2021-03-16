@@ -1,30 +1,6 @@
-const months = [
-  'January', 
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
+const h1 = document.createElement('h1');
+const txt = document.createTextNode('Text come from Javascript');
 
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday'
-]
+h1.appendChild(txt);
 
-const getDay = new Date().getDay();
-const getMonth = new Date().getMonth();
-
-console.log(days[getDay])
-console.log(months[getMonth])
+document.body.appendChild(h1);
