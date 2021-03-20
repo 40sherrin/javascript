@@ -5,11 +5,12 @@ const cors = require('cors');
 
 const app = express();
 
+
 app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors());
 
-const CONNECTION_URI = process.env.ATLAS_URI || 'mongodb+srv://javascriptfulstack:javacript@cluster0.iprn3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const CONNECTION_URI = process.env.ATLAS_URI || 'mongodb+srv://javascriptfulstack:javascript@cluster0.iprn3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URI, {useNewUrlParser: true, useUnifiedTopology: true})
