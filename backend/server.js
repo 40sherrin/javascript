@@ -1,7 +1,7 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 
@@ -9,7 +9,7 @@ app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors());
 
-const CONNECTION_URI = process.env.ATLAS_URI;
+const CONNECTION_URI = process.env.ATLAS_URI || 'mongodb+srv://javascriptfulstack:javacript@cluster0.iprn3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URI, {useNewUrlParser: true, useUnifiedTopology: true})
