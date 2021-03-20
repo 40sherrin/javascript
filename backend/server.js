@@ -1,9 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
+import express from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import cors from'cors';
 const app = express();
+
+// Routers 
+import getRouter from './routes/posts.js';
+app.use('/getRouter', getRouter);
 
 
 app.use(bodyParser.json({limit: '30mb', extended: true}));
