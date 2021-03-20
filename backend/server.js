@@ -6,12 +6,12 @@ const app = express();
 
 // Routers 
 import getRouter from './routes/posts.js';
-app.use('/getRouter', getRouter);
 
 
 app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors());
+app.use('/posts', getRouter);
 
 const CONNECTION_URI = process.env.ATLAS_URI || 'mongodb+srv://javascriptfulstack:javascript@cluster0.iprn3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
