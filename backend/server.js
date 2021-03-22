@@ -15,6 +15,10 @@ app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors());
 app.use('/posts', getRouter);
 
+app.get('/', (req, res) => {
+  res.send('Hello world javascript api');
+})
+
 const CONNECTION_URI = process.env.ATLAS_URI;
 const PORT = process.env.PORT;
 
