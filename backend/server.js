@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 const CONNECTION_URI = process.env.ATLAS_URI;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 500;
 
 mongoose.connect(CONNECTION_URI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`)))
