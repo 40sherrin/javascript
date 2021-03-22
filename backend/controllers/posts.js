@@ -30,5 +30,5 @@ export const updatePost = async (req, res) => {
     res.json(updatedPost)
   }catch(err){
     console.log(err.message);
-  }ss
+  }
 }
